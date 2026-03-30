@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "ESNext",
         "module": "CommonJS",
-        "lib": ["ESNext"],
+        "lib": ["DOM", "DOM.Iterable","ESNext"],
         "jsx": "react-jsx",
         "outDir": "./dist",
         "rootDir": "./src",
