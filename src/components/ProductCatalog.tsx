@@ -1,7 +1,7 @@
+import { type Product } from "../types";
 import React from "react";
 
-export function ProductCatalog({ products }) {
-  console.log("PRODUCTS IN CATALOG", products);
+export function ProductCatalog({ products }: { products: Product[] }) {
   return (
     <ul className="grid grid-cols-1 gap-x-4 gap-y-5 sm:grid-cols-2 xl:grid-cols-4">
       {products.map((product) => (
@@ -12,7 +12,11 @@ export function ProductCatalog({ products }) {
   );
 }
 
-function ProductCard({ product }) {
+type ProductCardProps = {
+  product: Product;
+};
+
+function ProductCard({ product }: ProductCardProps) {
   return (
     <li key={product.id}>
       <article className="overflow-hidden rounded-xl border border-white/10 bg-zinc-900 shadow-sm shadow-black/30 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-black/40">

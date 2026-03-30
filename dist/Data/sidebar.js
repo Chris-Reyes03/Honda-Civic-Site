@@ -1,4 +1,7 @@
-export const sidebaritems = [
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.sidebaritems = void 0;
+exports.sidebaritems = [
     {
         id: 1,
         title: "Product type",

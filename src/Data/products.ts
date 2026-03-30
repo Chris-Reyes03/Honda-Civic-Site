@@ -1,5 +1,14 @@
+export type Product = {
+  id: number;
+  name: string;
+  imagePath: string;
+  currentPrice: string;
+  oldPrice: string;
+  rating: string;
+  onSale: boolean;
+}
 
-export const products = [
+export const products: Product[] = [
   {
     id: 1,
     name: "2023 - 2026 Honda Civic Type R FL5 Front Lip V2",
