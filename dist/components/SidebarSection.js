@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SidebarSection = SidebarSection;
+const jsx_runtime_1 = require("react/jsx-runtime");
+const sidebar_1 = require("../Data/sidebar"); // Adjust path as needed
+function SidebarSection() {
+    return ((0, jsx_runtime_1.jsx)("div", { className: "mt-1 flex w-64 flex-col gap-[6.5px]", children: sidebar_1.sidebaritems.map((section) => ((0, jsx_runtime_1.jsxs)("section", { children: [(0, jsx_runtime_1.jsxs)("div", { className: "mb-3 flex items-center justify-between", children: [(0, jsx_runtime_1.jsx)("h2", { className: "text-2xl leading-none font-bold text-zinc-100", children: section.title }), (0, jsx_runtime_1.jsx)("span", { className: "px-2 text-xl text-zinc-500", children: "-" })] }), (0, jsx_runtime_1.jsxs)("aside", { className: "mt-[21.5px] rounded-2xl border border-white/10 bg-zinc-900 px-5 py-4 shadow-sm shadow-black/30", children: [(0, jsx_runtime_1.jsx)("div", { className: "space-y-2 text-[15px]", children: section.options.map((option, index) => ((0, jsx_runtime_1.jsxs)("label", { className: "flex cursor-pointer items-center justify-between gap-2 text-zinc-300 transition-colors hover:text-white", children: [(0, jsx_runtime_1.jsxs)("span", { className: "flex items-center gap-2", children: [(0, jsx_runtime_1.jsx)("input", { type: "checkbox", className: "h-4 w-4 rounded border-zinc-600 bg-zinc-800 accent-red-600" }), option.name] }), (0, jsx_runtime_1.jsx)("span", { className: "text-zinc-500", children: option.count })] }, index))) }), (0, jsx_runtime_1.jsx)("button", { className: "mt-4 text-sm font-medium text-red-500 transition hover:text-red-600", children: "+ Show More" })] })] }, section.id))) }));
+}

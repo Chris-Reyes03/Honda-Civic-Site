@@ -1,5 +1,6 @@
 import { type Product } from "../types";
 import React from "react";
+import { CartToggle } from "./CartToggle";
 
 export function ProductCatalog({ products }: { products: Product[] }) {
   return (
@@ -52,29 +53,7 @@ function ProductCard({ product }: ProductCardProps) {
             <button className="h-10 flex-1 rounded-full bg-zinc-100 px-3 py-2 text-sm font-semibold text-zinc-900 transition hover:bg-red-600 hover:text-white">
               Select options
             </button>
-            <button
-              aria-label="Add to cart"
-              className={`inline-flex h-10 w-10 items-center justify-center rounded-full border bg-zinc-950 transition-all duration-300 ${
-                product.id === 2
-                  ? "border-red-500/50 text-red-500 hover:border-zinc-100 hover:text-zinc-100"
-                  : "border-white/20 text-zinc-100 hover:border-red-500 hover:text-red-500"
-              }`}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5" // Use Tailwind classes for size!
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor" // This makes it follow the button's text color
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <circle cx={9} cy={20} r={1} />
-                <circle cx={17} cy={20} r={1} />
-                <path d="M3 4h2l2.4 10.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L21 7H7" />
-              </svg>
-            </button>
+            <CartToggle />
           </div>
         </div>
       </article>
