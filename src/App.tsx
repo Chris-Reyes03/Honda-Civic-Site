@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { SidebarSection } from "./components/SidebarSection";
 import { UtilityBar } from "./components/UtilityBar";
 import { ProductCatalog } from "./components/ProductCatalog";
+import { CartSidebar } from "./components/CartSidebar";
 
 import { products } from "./Data/products"; // Adjust path as needed
 
@@ -13,6 +14,7 @@ export function App() {
       <Screen>
         <Header />
         <Main />
+        <CartSidebar />
       </Screen>
     </PageWrapper>
   );
