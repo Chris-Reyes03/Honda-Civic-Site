@@ -127,7 +127,7 @@ export function CartSidebar() {
 
               {/* Checkout button — matches your site's red accent */}
               <button className="w-full bg-red-600 hover:bg-red-500 active:scale-[0.98] transition-all py-4 text-white text-[13px] font-black uppercase tracking-[0.2em] rounded-sm">
-                Checkout • {getTotalPrice()}
+                Checkout {getTotalPrice()}
               </button>
 
               {/* Continue shopping */}
