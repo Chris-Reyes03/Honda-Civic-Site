@@ -1,34 +1,28 @@
-import { PageWrapper } from "./components/PageWrapper";
-import { Screen } from "./components/Screen";
-import { Header } from "./components/Header";
 import { SidebarSection } from "./components/SidebarSection";
 import { UtilityBar } from "./components/UtilityBar";
 import { ProductCatalog } from "./components/ProductCatalog";
-import { CartSidebar } from "./components/CartSidebar";
 
 import { products } from "./Data/products"; // Adjust path as needed
+import { createBrowserRouter, Link, RouterProvider } from "react-router";
+import { ProductPage } from "./pages/ProductPage";
+import NotFound from "./pages/NotFoundPage";
+import Homepage from "./pages/HomePage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Homepage />,
+  },
+  {
+    path: "/products",
+    element: <ProductPage />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]);
 
 export function App() {
-  return (
-    <PageWrapper>
-      <Screen>
-        <Header />
-        <Main />
-        <CartSidebar />
-      </Screen>
-    </PageWrapper>
-  );
-}
-
-function Main() {
-  return (
-    <main className="mx-auto grid max-w-325 grid-cols-1 gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[250px_1fr] lg:px-8">
-      <SidebarSection />
-
-      <section>
-        <UtilityBar />
-        <ProductCatalog products={products} />
-      </section>
-    </main>
-  );
+  return <RouterProvider router={router} />;
 }

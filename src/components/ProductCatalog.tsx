@@ -23,7 +23,7 @@ type ProductCardProps = {
 function ProductCard({ product }: ProductCardProps) {
   return (
       <li>
-      <article className="overflow-hidden rounded-xl border border-white/10 bg-zinc-900 shadow-sm shadow-black/30 transition hover:-translate-y-0.5 hover:shadow-md hover:shadow-black/40">
+      <article className="overflow-hidden rounded-xl border border-white/10 bg-zinc-900 shadow-sm shadow-black/30 transition hover:-translate-y-0.5 hover:bg-red-900 hover:shadow-md hover:shadow-black/40">
         {/* Product Image Section */}
         <div className="relative h-56 bg-zinc-800">
           {product.onSale && (
