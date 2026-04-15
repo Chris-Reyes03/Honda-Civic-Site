@@ -5,5 +5,6 @@ export type Product = {
   currentPrice: string;
   oldPrice: string;
   rating: string;
+  type: string;
   onSale: boolean;
 }

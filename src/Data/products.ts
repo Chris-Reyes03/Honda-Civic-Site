@@ -6,6 +6,7 @@ export const products = [
     currentPrice: "₱14,300.00",
     oldPrice: "₱15,900.00",
     rating: "4.8 ★",
+    type: "Front Lip",
     onSale: true,
   },
   {
@@ -15,6 +16,7 @@ export const products = [
     currentPrice: "₱22,000.00",
     oldPrice: "₱24,500.00",
     rating: "5.0 ★",
+    type: "Rear Wing",
     onSale: true,
   },
   {
@@ -24,6 +26,7 @@ export const products = [
     currentPrice: "₱13,800.00",
     oldPrice: "₱15,300.00",
     rating: "5.0 ★",
+    type: "Side Skirt",
     onSale: true,
   },
   {
@@ -33,6 +36,7 @@ export const products = [
     currentPrice: "₱19,200.00",
     oldPrice: "₱20,200.00",
     rating: "4.8 ★",
+    type: "Coil Spring",
     onSale: true,
   },
   {
@@ -42,6 +46,7 @@ export const products = [
     currentPrice: "₱27,500.00",
     oldPrice: "₱30,600.00",
     rating: "5.0 ★",
+    type: "Front Lip",
     onSale: true,
   },
   {
@@ -51,6 +56,7 @@ export const products = [
     currentPrice: "₱8,300.00",
     oldPrice: "₱9,200.00",
     rating: "5.0 ★",
+    type: "Front Lip",
     onSale: true,
   },
   {
@@ -60,6 +66,7 @@ export const products = [
     currentPrice: "₱24,500.00",
     oldPrice: "₱22,000.00",
     rating: "5.0 ★",
+    type: "Rear Wing",
     onSale: true,
   },
   {
@@ -69,6 +76,7 @@ export const products = [
     currentPrice: "₱7,700.00",
     oldPrice: "₱8,600.00",
     rating: "5.0 ★",
+    type: "Rear Wing",
     onSale: true,
   },
 ];

@@ -11,64 +11,75 @@ interface CarModel {
 const models: CarModel[] = [
   {
     name: "11th Gen",
-    description: "Iconic sports car with rear engine: 2 doors, 2+2 seats.",
+    description:
+      "Modern sophistication meets performance: 4-door sedan/hatchback with a refined turbocharged powertrain.",
     badge: "Gasoline",
-    image: "/catalog-image/911.jpeg",
-    href: "/models/911",
+    image: "/catalog-image/11th-gen.jpg",
+    href: "/models/fe-fl",
   },
   {
     name: "10th Gen",
-    description: "Precise mid-engine sports car: 2 doors, 2 seats.",
+    description:
+      "Aggressive styling and the return of the Turbo: Features the high-downforce FK8 Type R and versatile FC body styles.",
     badge: "Gasoline",
-    image: "/catalog-image/718.jpeg",
-    href: "/models/718",
+    image: "/catalog-image/10th-gen.avif",
+    href: "/models/fk-fc",
   },
   {
     name: "8th Gen",
-    description: "Iconic sports car with rear engine: 2 doors, 2+2 seats.",
+    description:
+      "The 'Futuristic' era: Known for the unique dual-tier dashboard and the high-revving K20Z3 engine in the Si models.",
     badge: "Gasoline",
-    image: "/catalog-image/911.jpeg",
-    href: "/models/911",
+    image: "/catalog-image/8th-gen.jpg",
+    href: "/models/fa-fg",
   },
   {
     name: "6th Gen",
-    description: "Precise mid-engine sports car: 2 doors, 2 seats.",
+    description:
+      "The peak of 90s reliability: The 'EK' chassis is a tuner favorite, featuring double-wishbone suspension and the first Type R.",
     badge: "Gasoline",
-    image: "/catalog-image/718.jpeg",
-    href: "/models/718",
+    image: "/catalog-image/6th-gen.jpg",
+    href: "/models/ek-ej",
   },
   {
     name: "5th Gen",
-    description: "Iconic sports car with rear engine: 2 doors, 2+2 seats.",
+    description:
+      "Aerodynamic 'Egg' styling: Lightweight, iconic EG hatchbacks that defined the front-wheel-drive racing scene.",
     badge: "Gasoline",
-    image: "/catalog-image/911.jpeg",
-    href: "/models/911",
+    image: "/catalog-image/5th-gen.jpg",
+    href: "/models/eg-eh",
   },
   {
     name: "4th Gen",
-    description: "Precise mid-engine sports car: 2 doors, 2 seats.",
+    description:
+      "The 'Grand Civic': Boxy 80s aesthetics featuring the legendary EF chassis and responsive double-wishbone handling.",
     badge: "Gasoline",
-    image: "/catalog-image/718.jpeg",
-    href: "/models/718",
+    image: "/catalog-image/4th-gen.jpg",
+    href: "/models/ef-ed",
   },
 ];
 
 const CatalogSection = () => {
   return (
-    <section className="w-full bg-[#0a0a0a] px-4 py-12 md:px-8">
+    <section className="w-full bg-[#0a0a0a] px-4 py-24 md:px-8">
+      <div className="mx-auto mb-12 max-w-[1200px]">
+        <h1 className="font-mediumbold text-4xl tracking-tight text-white md:text-5xl">
+          Your Civic journey starts now.
+        </h1>
+      </div>
       {/* Grid container with gap to match reference spacing */}
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-7 md:grid-cols-2">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-7 md:grid-cols-2">
         {models.map((model) => (
           <a
             key={model.name}
             href={model.href}
-            className="group relative aspect-[1.1/1] overflow-hidden rounded-md bg-[#1c1c1c] transition-all"
+            className="group relative h-[565px] w-full overflow-hidden rounded-md bg-[#1c1c1c] transition-all"
           >
             {/* Image with dark overlay gradient */}
             <img
               src={model.image}
               alt={model.name}
-              className="h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
+              className="h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-100"
             />
 
             {/* Top/Bottom Vignette for text readability */}
