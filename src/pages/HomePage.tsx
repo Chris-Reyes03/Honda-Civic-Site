@@ -24,7 +24,7 @@ const Homepage = () => {
         <nav className="relative z-10 flex items-center justify-between px-10 py-8">
           <div className="flex cursor-pointer items-center gap-2 text-white/80 transition-colors duration-300 hover:text-white">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="http:/ /www.w3.org/2000/svg"
               width={20}
               height={20}
               viewBox="0 0 24 24"

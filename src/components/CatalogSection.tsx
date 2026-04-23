@@ -156,10 +156,10 @@ const CatalogSection = () => {
                   isActive ? "pointer-events-none opacity-0" : "opacity-100"
                 }`}
               >
-                <div className="w-fit rounded-[2px] bg-[#444] px-2 py-[2px]">
-                  <span className="text-[11px] font-medium text-white/90">
+                <div className="w-fit rounded-[2px] bg-[#444]">
+                  <p className="px-2 py-1 text-[11px] font-medium text-white/90">
                     {model.badge}
-                  </span>
+                  </p>
                 </div>
                 <div className="flex items-center justify-between gap-4">
                   <p className="max-w-[85%] text-[14px] leading-snug text-white">
@@ -194,12 +194,14 @@ const CatalogSection = () => {
                 {/* Frosted dark panel */}
                 <div className="m-3 rounded-md bg-black/60 px-5 py-4 backdrop-blur-sm">
                   {/* Caption: e.g. "11th-gen Honda Civic Type R (FL5)" */}
-                  <p className="mb-4 text-[11px] font-medium tracking-wide text-white/50">
-                    {model.name} Honda Civic
-                  </p>
+                  <div className="w-fit rounded-[2px] bg-[#444] px-2 py-[2px]">
+                    <p className="px-0.5 py-0.5 text-[11px] font-medium tracking-wide text-white/90">
+                      {model.name} Honda Civic
+                    </p>
+                  </div>
 
                   {/* Stat rows */}
-                  <div className="flex flex-col gap-3">
+                  <div className="mt-4 flex flex-col gap-3">
                     {model.stats.map((stat) => (
                       <div key={stat.label} className="flex items-center gap-3">
                         {/* Label + value */}
