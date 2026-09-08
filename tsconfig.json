@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "CommonJS",
+        "lib": ["DOM", "DOM.Iterable","ESNext"],
+        "jsx": "react-jsx",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowJs": true,      // Allows you to import .js/.jsx files into .ts/.tsx
+        "checkJs": false,     // Tells TS not to report errors in .js files
+        "noImplicitAny": false
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.spec.ts"],
+}

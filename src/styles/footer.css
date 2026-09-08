@@ -1,0 +1,386 @@
+/* Footer Styles - What Matters Agency Style with Red & Black Theme */
+
+.footer-container {
+  background-color: #000000;
+  /* color: #ffffff; */
+  border-top: 4px solid #dc2626;
+  margin-top: 100px;
+  padding: 80px 120px 60px;
+}
+
+/* Top Section - Brand + Nav + Info */
+.footer-top {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 70px;
+  align-items: flex-start;
+}
+
+/* Brand Section */
+
+.footer-brand-name {
+    font-size: 5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-start;
+  letter-spacing: 3px;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.footer-brand-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Prevents the subtitle from stretching vertically */
+  /* gap: 10px; Adds space between the name and subtitle */
+}
+
+.footer-brand-subtitle { /* Negative line-height to pull letters closer together */
+  font-size: 0.8rem;
+  color: #dc2626;
+  letter-spacing: -0.8px;
+  font-weight: 800;
+  display: block; /* Forces it to act as a normal block box */
+  width: 1ch; /* Limits width to exactly one character */
+  word-break: break-all; /* Forces letters and symbols to break onto new lines */
+  text-align: center; /* Centers the letters in the column */
+}
+
+/* Navigation Section */
+.footer-nav-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center; /* Keeps the entire block centered on the page */
+}
+
+.footer-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+  /* FIXED: Lines up the starting point of every text item */
+  align-items: flex-start; 
+  text-align: left;
+}
+
+.footer-nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.footer-nav-links li a::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #dc2626;
+  transition: width 0.3s ease;
+}
+
+.footer-nav-links li a:hover {
+  color: #dc2626;
+}
+
+.footer-nav-links li a:hover::before {
+  width: 100%;
+}
+
+/* Info Section - Social & Contact */
+.footer-contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Space between the social links and the email */
+  align-items: flex-start; /* Keeps the left edges perfectly lined up */
+}
+
+/* 3. The inner blocks keep their left alignment */
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start; 
+}
+
+.info-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  display: inline-block;
+  width: fit-content;
+  
+  /* FIXED: REMOVED align-self: flex-end; */
+}
+
+
+.info-link::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background-color: #dc2626;
+  transition: width 0.3s ease;
+}
+
+.info-link:hover {
+  color: #dc2626;
+}
+
+.info-link:hover::before {
+  width: 100%;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+  align-items: flex-start;
+}
+
+.footer-contact-info a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 1rem;
+  gap: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-info a:hover {
+  color: #dc2626;
+}
+
+/* Image Section */
+/* The Section Container */
+.footer-image-section {
+  max-width: 1400px;
+  margin: 0 auto 100px;
+  display: flex;
+  gap: 40px;
+}
+
+/* The Wrapper (The bounding box for the logo) */
+.footer-image-placeholder {
+  flex: 0 0 300px;       /* Set this to the maximum width you want the logo area to take */
+  height: 150px;         /* Set this to the maximum height you want */
+  display: flex;         /* Enables easy centering */
+  justify-content: center; /* Centers logo horizontally */
+  align-items: center;     /* Centers logo vertically */
+  border-radius: 8px;    /* Optional: clean, slightly rounded corners */
+}
+
+/* The Actual Logo Image */
+.footer-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  /* CRITICAL FOR LOGOS: Prevents cropping, maintains aspect ratio */
+  object-fit: contain; 
+}
+
+/* Bottom Section */
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 40px;
+  border-top: 2px solid #dc2626;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  text-align: center;
+}
+
+.footer-bottom-left,
+.footer-bottom-center,
+.footer-bottom-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+}
+
+.footer-bottom-left {
+  text-align: left;
+}
+
+.footer-bottom-right {
+  text-align: right;
+}
+
+.footer-bottom a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.footer-bottom a:hover {
+  color: #dc2626;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-container {
+    padding: 60px 40px 50px;
+  }
+
+  .footer-top {
+    gap: 60px;
+    margin-bottom: 80px;
+  }
+
+  .footer-brand-name {
+    font-size: 2.5rem;
+    letter-spacing: -0.2em;
+
+    /* FIXED: Spans across all 3 columns to take up the full top space */
+  grid-column: 1 / -1; 
+    width: 100%;
+    margin-top: 0; /* Removes any top spacing */
+    }
+
+  .footer-nav-links li a {
+    font-size: 1.1rem;
+  }
+
+  .footer-image-section {
+    margin-bottom: 80px;
+  }
+
+  .footer-image-placeholder {
+    flex: 0 0 350px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 50px 30px 40px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+  }
+
+  .footer-brand-name {
+    font-size: 2rem;
+    
+  }
+
+  .footer-nav-links li a {
+    font-size: 1rem;
+  }
+
+  .footer-info-section {
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .info-link {
+    align-self: flex-start;
+  }
+
+  .info-link::before {
+    right: auto;
+    left: 0;
+  }
+
+  .footer-image-section {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+
+  .footer-image-placeholder {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 250px;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-bottom-left,
+  .footer-bottom-right {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 40px 20px 30px;
+    margin-top: 60px;
+  }
+
+  .footer-brand-name {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .footer-brand-subtitle {
+  font-size: 0.9rem;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  width: 1ch; /* Forces the box to be exactly one character wide */
+  word-break: break-all; /* Forces everything to break and stack */
+  text-align: center; /* Centers the stacked characters */
+}
+
+  .footer-nav-links li a {
+    font-size: 0.95rem;
+  }
+
+  .footer-image-placeholder {
+    height: 200px;
+  }
+
+  .footer-bottom {
+    padding-top: 30px;
+  }
+
+  .footer-bottom a,
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+}
