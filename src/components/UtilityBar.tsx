@@ -1,8 +1,12 @@
-export function UtilityBar() {
+interface UtilityBarProps {
+  productCount: number;
+}
+
+export function UtilityBar({ productCount }: UtilityBarProps) {
   return (
     <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
       <p className="text-sm font-semibold text-zinc-300">
-        <span className="text-zinc-100">55</span> Products
+        <span className="text-zinc-100">{productCount}</span> Products
       </p>
       <div className="flex items-center gap-3">
         <input

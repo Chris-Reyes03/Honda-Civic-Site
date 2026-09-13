@@ -1,5 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaXTwitter,
+  FaYoutube,
+} from 'react-icons/fa6';
 import '../styles/footer2.css';
 
 export const Footer = () => {
@@ -34,14 +40,32 @@ export const Footer = () => {
         {/* Right - Social & Contact */}
         <div className="footer-info-section">
           <div className="footer-social-links">
-            <a href="#instagram" className="info-link">
-              INSTAGRAM
+            <a
+              href=""
+              className="info-link"
+              aria-label="YouTube"
+              title="YouTube"
+            >
+              <FaYoutube aria-hidden="true" />
             </a>
-            <a href="#tiktok" className="info-link">
-              TIKTOK
+            <a href="" className="info-link" aria-label="X" title="X">
+              <FaXTwitter aria-hidden="true" />
             </a>
-            <a href="#youtube" className="info-link">
-              YOUTUBE
+            <a
+              href=""
+              className="info-link"
+              aria-label="Instagram"
+              title="Instagram"
+            >
+              <FaInstagram aria-hidden="true" />
+            </a>
+            <a
+              href=""
+              className="info-link"
+              aria-label="Facebook"
+              title="Facebook"
+            >
+              <FaFacebookF aria-hidden="true" />
             </a>
           </div>
           <div className="footer-contact-info">

@@ -1,42 +1,67 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router";
-import CatalogSection from "../components/CatalogSection";
-import { ScrollTrigger } from "gsap/all";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import HomepageHeader from "../components/HomepageHeader";
-import HeaderSlider from "../components/HeaderSlider";
-import { Footer } from "../components/Footer";
+import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router';
+import CatalogSection from '../components/CatalogSection';
+import { ScrollTrigger } from 'gsap/all';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import HomepageHeader from '../components/HomepageHeader';
+import ParallaxSection from '../components/ParallaxSection';
+import { Footer } from '../components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Homepage = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const updateMotionPreference = () =>
+      setPrefersReducedMotion(motionQuery.matches);
+
+    updateMotionPreference();
+    motionQuery.addEventListener('change', updateMotionPreference);
+
+    return () =>
+      motionQuery.removeEventListener('change', updateMotionPreference);
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = true;
+
+    if (prefersReducedMotion) {
+      video.pause();
+    }
+  }, [prefersReducedMotion]);
 
   useGSAP(() => {
     const Herotl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".hero-container",
-        start: "top 1%",
-        end: "bottom top",
+        trigger: '.hero-container',
+        start: 'top 1%',
+        end: 'bottom top',
         scrub: true,
       },
     });
-    Herotl.to(".hero-container", {
+    Herotl.to('.hero-container', {
       rotate: 0,
       // scale: 0.9,
       yPercent: 30,
-      ease: "power1.inOut",
+      ease: 'power1.inOut',
     });
   }, []);
 
   const menuItems = [
-    { label: "Models", onClick: () => navigate("/products") },
-    { label: "Vehicle Purchase", onClick: () => setIsMenuOpen(false) },
-    { label: "Services", onClick: () => setIsMenuOpen(false) },
-    { label: "Experience", onClick: () => setIsMenuOpen(false) },
-    { label: "Find a Dealer", onClick: () => setIsMenuOpen(false) },
+    { label: 'Models', onClick: () => navigate('/products') },
+    { label: 'Vehicle Purchase', onClick: () => setIsMenuOpen(false) },
+    { label: 'Services', onClick: () => setIsMenuOpen(false) },
+    { label: 'Experience', onClick: () => setIsMenuOpen(false) },
+    { label: 'Find a Dealer', onClick: () => setIsMenuOpen(false) },
   ];
 
   const handleMenuToggle = () => {
@@ -48,12 +73,39 @@ const Homepage = () => {
       {/* Hero Section */}
       <div className="hero-container relative h-screen w-full overflow-hidden">
         {/* Background Layer */}
-        <div className="absolute inset-0 z-0 bg-cover bg-center" />
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('/catalog-image/hero-bg.jpeg'), url('/catalog-image/slider-2.avif')",
+          }}
+          aria-hidden="true"
+        />
+
+        {!prefersReducedMotion && (
+          <video
+            ref={videoRef}
+            className="absolute inset-0 z-0 h-full w-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/catalog-image/hero-bg.jpeg"
+            aria-hidden="true"
+          >
+            <source src="/video/output_muted.mp4" type="video/mp4" />
+          </video>
+        )}
+
+        <div
+          className="pointer-events-none absolute inset-0 z-[5] bg-[rgba(0,0,0,0.4)]"
+          aria-hidden="true"
+        />
 
         {/* Blurred Backdrop */}
         <div
           className={`fixed inset-0 z-40 bg-black/30 backdrop-blur-sm transition-opacity duration-300 ${
-            isMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
+            isMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'
           }`}
           onClick={() => setIsMenuOpen(false)}
         />
@@ -61,7 +113,7 @@ const Homepage = () => {
         {/* Sidebar Menu */}
         <div
           className={`fixed top-0 left-0 z-50 h-screen w-1/3 transform bg-zinc-950 shadow-2xl transition-transform duration-300 ease-out ${
-            isMenuOpen ? "translate-x-0" : "-translate-x-full"
+            isMenuOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
           {/* Close Button */}
@@ -152,7 +204,7 @@ const Homepage = () => {
           <div className="absolute left-1/2 -translate-x-1/2">
             <img
               className="h-auto w-40"
-              src="/public/catalog-image/Vector.svg"
+              src="/catalog-image/Vector.svg"
               alt="nav-logo"
             />
           </div>
@@ -163,12 +215,12 @@ const Homepage = () => {
         {/* Main Content */}
         <main
           className="relative z-10 flex flex-col justify-center px-12 md:px-24"
-          style={{ height: "calc(100vh - 150px)" }}
+          style={{ height: 'calc(100vh - 150px)' }}
         >
           <div className="mt-72">
             <svg
               className="overflow-visible pt-4"
-              style={{ width: "551px", height: "auto" }}
+              style={{ width: '551px', height: 'auto' }}
               width="818"
               height="181"
               viewBox="0 0 818 181"
@@ -176,7 +228,7 @@ const Homepage = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <image
-                href="/public/catalog-image/hero-contentt.svg"
+                href="/catalog-image/hero-contentt.svg"
                 x="0"
                 y="10"
                 width="818"
@@ -218,12 +270,12 @@ const Homepage = () => {
           className="pointer-events-none absolute inset-0 z-[5]"
           style={{
             background:
-              "radial-gradient(circle, , transparent 40%, rgba(0,0,0,0.4) 100%)",
+              'radial-gradient(circle, , transparent 40%, rgba(0,0,0,0.4) 100%)',
           }}
         />
       </div>
       <HomepageHeader />
-      <HeaderSlider />
+      <ParallaxSection />
       <CatalogSection />
       <Footer />
     </div>

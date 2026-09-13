@@ -42,7 +42,7 @@
   /* Add your background logic here to keep the JSX clean */
   background-image: 
     linear-gradient(to bottom, rgba(0,0,0,1) 2%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 100%), 
-    url('/public/catalog-image/hero-bg.jpeg');
+    url('/catalog-image/hero-bg.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

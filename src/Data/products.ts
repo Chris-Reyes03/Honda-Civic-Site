@@ -2,7 +2,7 @@ export const products = [
   {
     id: 1,
     name: "2023 - 2026 Honda Civic Type R FL5 Front Lip V2",
-    imagePath: "catalog-image/front-lip.webp",
+    imagePath: "/catalog-image/front-lip.webp",
     currentPrice: "₱14,300.00",
     oldPrice: "₱15,900.00",
     rating: "4.8 ★",
@@ -12,7 +12,7 @@ export const products = [
   {
     id: 2,
     name: "2023 - 2026 Honda Civic Type R FL5 AFD Paint Matched Rear Spoiler Wing",
-    imagePath: "catalog-image/rear-wing-1.webp",
+    imagePath: "/catalog-image/rear-wing-1.webp",
     currentPrice: "₱22,000.00",
     oldPrice: "₱24,500.00",
     rating: "5.0 ★",
@@ -22,7 +22,7 @@ export const products = [
   {
     id: 3,
     name: "2023 - 2026 Honda Civic Type R FL5 Side Skirt Extensions",
-    imagePath: "catalog-image/side-skirt-1.webp",
+    imagePath: "/catalog-image/side-skirt-1.webp",
     currentPrice: "₱13,800.00",
     oldPrice: "₱15,300.00",
     rating: "5.0 ★",
@@ -32,7 +32,7 @@ export const products = [
   {
     id: 4,
     name: "2023 - 2026 Honda Civic Type R FL5 AFD Sport Lowering Springs",
-    imagePath: "catalog-image/coil-spring-1.webp",
+    imagePath: "/catalog-image/coil-spring-1.webp",
     currentPrice: "₱19,200.00",
     oldPrice: "₱20,200.00",
     rating: "4.8 ★",
@@ -42,7 +42,7 @@ export const products = [
   {
     id: 5,
     name: "2023 - 2026 Honda Civic Type R FL5 Front Lip V3",
-    imagePath: "catalog-image/front-lip-2.webp",
+    imagePath: "/catalog-image/front-lip-2.webp",
     currentPrice: "₱27,500.00",
     oldPrice: "₱30,600.00",
     rating: "5.0 ★",
@@ -52,7 +52,7 @@ export const products = [
   {
     id: 6,
     name: "2023 - 2026 Honda Civic Type R FL5 AFD Front Lip V1",
-    imagePath: "catalog-image/front-lip-1.webp",
+    imagePath: "/catalog-image/front-lip-1.webp",
     currentPrice: "₱8,300.00",
     oldPrice: "₱9,200.00",
     rating: "5.0 ★",
@@ -62,7 +62,7 @@ export const products = [
   {
     id: 7,
     name: "2023 - 2026 Honda Civic Type R FL5 AFD Paint Matched Rear Spoiler Wing",
-    imagePath: "catalog-image/rear-wing-1.webp",
+    imagePath: "/catalog-image/rear-wing-1.webp",
     currentPrice: "₱24,500.00",
     oldPrice: "₱22,000.00",
     rating: "5.0 ★",
@@ -72,7 +72,7 @@ export const products = [
   {
     id: 8,
     name: "2023 - 2026 Honda Civic Hatch Rear Trunk Spoiler V1",
-    imagePath: "catalog-image/rear-wing-2.webp",
+    imagePath: "/catalog-image/rear-wing-2.webp",
     currentPrice: "₱7,700.00",
     oldPrice: "₱8,600.00",
     rating: "5.0 ★",

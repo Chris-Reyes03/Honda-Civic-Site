@@ -1,12 +1,13 @@
-import { CartSidebar } from "../components/CartSidebar";
-import { Header } from "../components/Header"
-import { PageWrapper } from "../components/PageWrapper"
-import { ProductCatalog } from "../components/ProductCatalog";
-import { Screen } from "../components/Screen"
-import { SidebarSection } from "../components/SidebarSection";
-import { UtilityBar } from "../components/UtilityBar";
-import { products } from "../Data/products";
-
+import { CartSidebar } from '../components/CartSidebar';
+import { AdroSection } from '../components/AdroSection';
+import { FeatureProduct } from '../components/FeatureProduct';
+import { Header } from '../components/Header';
+import { PageWrapper } from '../components/PageWrapper';
+import { ProductCatalog } from '../components/ProductCatalog';
+import { Screen } from '../components/Screen';
+import { SidebarSection } from '../components/SidebarSection';
+import { UtilityBar } from '../components/UtilityBar';
+import { products } from '../Data/products';
 
 function Main() {
   return (
@@ -14,9 +15,12 @@ function Main() {
       <SidebarSection />
 
       <section>
-        <UtilityBar />
+        <UtilityBar productCount={products.length} />
         <ProductCatalog products={products} />
       </section>
+
+      <FeatureProduct />
+      <AdroSection />
     </main>
   );
 }
@@ -27,9 +31,9 @@ export const ProductPage = () => {
       <Screen>
         <Header />
         <Main />
-      
+
         <CartSidebar />
       </Screen>
     </PageWrapper>
-  )
-}
+  );
+};

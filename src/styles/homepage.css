@@ -73,7 +73,7 @@
             rgba(0, 0, 0, 0) 60%,      /* Stays transparent in the middle */
             rgba(0, 0, 0, 1) 100%    /* Darkest at the very bottom */
         ), 
-        url('public/catalog-image/hero-bg.jpeg');
+        url('/catalog-image/hero-bg.jpeg');
     background-size: cover;
     background-position: center;
 }
